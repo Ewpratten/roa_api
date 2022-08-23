@@ -46,4 +46,4 @@ class handler(BaseHTTPRequestHandler):
             datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n"
         data += "\n".join(
             [f"route {prefix} max 24 as {asn}" for asn in ampr_roas for prefix in ampr_roas[asn]])
-        self.wfile.write(data)
+        self.wfile.write(data.encode())
