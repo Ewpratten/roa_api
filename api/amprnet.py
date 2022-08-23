@@ -18,6 +18,7 @@ def get_all_ampr_roas():
 
                 # Get the prefix and asn
                 prefix, asn = roa["rpslPk"].split("AS")
+                asn = int(asn)
 
                 # Create the ASN in the table if it doesn't exist
                 if asn not in as_to_prefix:
