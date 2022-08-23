@@ -14,7 +14,7 @@ class handler(BaseHTTPRequestHandler):
 
         # Fetch the data
         dn42_roas = requests.get(
-            "https://dn42.burble.com/roa/dn42_roa_bird2_6.conf")
+            "https://dn42.burble.com/roa/dn42_roa_bird2_6.conf").text
 
         # Write bird-style ROA data
         data = "# Cached by roa.va3zza.com on " + \
